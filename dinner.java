@@ -45,7 +45,9 @@ public class dinner {
                             p_salz +
                             p_water;
 
-        System.out.println("The meal costs: " + expanse + " € for " + persons + " people");
+        String text = String.format("The meal costs: %.2f € for %d people", expanse, (int)persons);
+        System.out.println(text);
+
 
         // Nudelmenge
         // Wassermenge
