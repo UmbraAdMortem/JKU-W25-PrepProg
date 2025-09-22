@@ -1,0 +1,86 @@
+*** Welcome to IELM ***  Type (describe-mode) or press C-h m for help.
+ELISP> 5
+5
+ (#o5, #x5, ?\C-e)
+ELISP> 5*5
+*** Eval error ***  Symbol’s value as variable is void: 5*5
+ELISP> 5 * 5
+*** IELM error ***  More than one sexp in input
+ELISP> 5+1
+*** Eval error ***  Symbol’s value as variable is void: 5+1
+ELISP> (5+1)
+*** Eval error ***  Symbol’s function definition is void: 5+1
+ELISP> (+ 5 1)
+6
+ (#o6, #x6, ?\C-f)
+ELISP> 'Hello World'
+*** IELM error ***  More than one sexp in input
+ELISP> "Hello World"
+"Hello World"
+
+ELISP> (= 1 1)
+t
+
+ELISP> (= 1 0)
+nil
+
+ELISP> (= 42 10)
+nil
+
+ELISP> (if(= 42 10) "Fav" "Other")
+"Other"
+
+ELISP> (if(= 42 42) "Fav" "Other")
+"Fav"
+
+ELISP> (if(= 42 42) "Fav" "Other")
+"Fav"
+
+ELISP> (when(> 10 0) "Gr")
+"Gr"
+
+ELISP> (when(> 10 11) "Gr")
+nil
+
+ELISP> 
+ELISP> (message "Hello World")
+"Hello World"
+
+ELISP> (if(= 42 42) (message "Fav") "Other")
+"Fav"
+
+ELISP> (if(= 42 42) (message "Fav") "Other")
+ELISP> (if(= 42 10) (message "Fav") "Other")
+"Other"
+
+ELISP> (insert "TEst")
+nil
+
+ELISP> (when t (insert "Hello") (insert "World"))
+nil
+
+ELISP> HelloWorld
+*** Eval error ***  Symbol’s value as variable is void: HelloWorld
+ELISP> (when nil (insert "Hello") (insert "World"))
+nil
+
+ELISP> 
+ELISP> (insert "Hello World")
+nil
+
+ELISP> (insert "Hello World")
+nil
+o
+ELISP> (insert "Hello World\n")
+nil
+
+ELISP> (insert "Hello World\n")
+nil
+
+ELISP> (when t (insert "Hello") (insert "World"))
+nil
+
+ELISP> (when nil (insert "Hello") (insert "World"))
+nil
+
+ELISP> 
