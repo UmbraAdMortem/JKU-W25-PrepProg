@@ -4,14 +4,15 @@ public class pattern {
         triangle(3);
         System.out.println();
 
-        parallel(6, 5, 2);
+        parallel(6, 5, 2, 0);
         System.out.println();
-        
+
         triangle(4);
         triangleReverse(3);
         System.out.println();
 
-        
+        parallel(4, 4, -1, 4);
+        System.out.println();
     }
 
     public static void triangle(int size) {
@@ -23,8 +24,7 @@ public class pattern {
         }
     }
 
-    public static void triangleReverse(int size)
-    {
+    public static void triangleReverse(int size) {
         for (int i = size; i > 0; i--) {
             for (int j = i; j > 0; j--) {
                 System.out.print('#');
@@ -33,9 +33,9 @@ public class pattern {
         }
     }
 
-    public static void parallel(int width, int height, int indent) {
+    public static void parallel(int width, int height, int indent, int initIndent) {
         for (int i = 0; i < height; i++) {
-            int indentation = i * indent;
+            int indentation = initIndent + (i * indent);
             for (int j = 0; j < width + indentation; j++) {
                 System.out.print(j < indentation ? ' ' : '#');
             }
