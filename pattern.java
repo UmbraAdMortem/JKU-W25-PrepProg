@@ -1,14 +1,17 @@
 public class pattern {
     public static void main() {
 
-        triangle(3);
+        // triangle(3);
+        parallel(3, 3, 1, -2);
         System.out.println();
-
+        
         parallel(6, 5, 2, 0);
         System.out.println();
-
-        triangle(4);
-        triangleReverse(3);
+        
+        // triangle(4);
+        parallel(4, 4, 1, -3);
+        // triangleReverse(3);
+        parallel(3, 3, -1, 0);
         System.out.println();
 
         parallel(4, 4, -1, 4);
