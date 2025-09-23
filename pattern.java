@@ -1,23 +1,26 @@
 public class pattern {
     public static void main() {
 
-        triangle(3);
-        // parallel(3, 3, 1, -2, 0);
+        // triangle(3);
+        parallel(3, 3, 1, -2, 0);
         System.out.println();
 
         parallel(6, 5, 2, 0, 0);
         System.out.println();
 
-        triangle(4);
-        // parallel(4, 4, 1, -3, 0);
-        triangleReverse(3);
-        // parallel(3, 3, -1, 0, 0);
+        // triangle(5);
+        parallel(5, 5, 1, -4, 0);
+        // triangleReverse(4);
+        parallel(4, 4, -1, 0, 0);
         System.out.println();
 
-        parallel(4, 4, -1, 4, 0);
+        parallel(4, 5, -1, 4, 0);
         System.out.println();
 
         parallel(6, 6, 1, 0, 6);
+        System.out.println();
+
+        parallel(6, 6, -1, 5, 6);
         System.out.println();
     }
 
