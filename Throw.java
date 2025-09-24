@@ -26,7 +26,7 @@ public class Throw {
 
         int time = 0;
         for (; time <= 10000 && pos_y >= 0.0; ++time) {
-            System.out.print(String.format("Time %4ds: P(%5.2f|%5.2f) |", time, pos_x, pos_y));
+            System.out.format("Time %4ds: P(%5.2f|%5.2f) |", time, pos_x, pos_y);
             for (int y = 0; y < (int) (pos_y * 10); ++y)
                 System.out.print(" ");
 
@@ -39,6 +39,6 @@ public class Throw {
             velocity_x += gravity_x;
             velocity_y += gravity_y;
         }
-        System.out.println(String.format("Time %4ds: P(%5.2f|%5.2f) V X", time, pos_x, pos_y));
+        System.out.format("Time %4ds: P(%5.2f|%5.2f) V X%n", time, pos_x, pos_y);
     }
 }
