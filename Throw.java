@@ -27,6 +27,8 @@ public class Throw {
         // int time_max = queryInt("Provide maximum abount of simulation time: ");
         // System.out.println();
 
+        double y_max = 0.0;
+        int t_y_max = 0;
 
         System.out.println(
                 "--------------------------------------------------------------------------------------------> Y");
@@ -41,6 +43,11 @@ public class Throw {
             // System.out.print(pos_y);
             System.out.println();
 
+            if (y_max < pos_y) {
+                y_max = pos_y;
+                t_y_max = time;
+            }
+
             pos_x += velocity_x;
             pos_y += velocity_y;
 
@@ -51,5 +58,7 @@ public class Throw {
             velocity_y += gravity_y;
         }
         System.out.format("Time %4ds: P(%5.2f|%5.2f) V X%n", time, pos_x, pos_y);
+
+        System.out.format("The ball flies up to %.2fm after %ds.%n", y_max, t_y_max);
     }
 }
