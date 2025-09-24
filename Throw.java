@@ -4,30 +4,41 @@ public class Throw {
         double input = In.readDouble();
         return input;
     }
-    
+
     public static void main(String[] args) {
-        // double pos_x = 0.0;
-        // double pos_y = 0.0;
-        // double velocity_x = 1.0;
-        // double velocity_y = 1.0;
-        // double gravity_x = 0.0;
-        // double gravity_y = -0.1;
-
-        double pos_x = queryDouble("Provide initial position in x: ");
-        double pos_y = queryDouble("Provide initial position in y: ");
-        double velocity_x = queryDouble("Provide initial velovity in x: ");
-        double velocity_y = queryDouble("Provide initial velovity in y: ");
+        double pos_x = 0.0;
+        double pos_y = 0.0;
+        double velocity_x = 1.0;
+        double velocity_y = 1.0;
         double gravity_x = 0.0;
-        double gravity_y = queryDouble("Provide initial gravity in y: ");
-        System.out.println();
+        double gravity_y = -0.1;
 
-        for (int time = 0; time <= 10000 && pos_y >= 0.0; ++time) {
+        // double pos_x = queryDouble("Provide initial position in x: ");
+        // double pos_y = queryDouble("Provide initial position in y: ");
+        // double velocity_x = queryDouble("Provide initial velovity in x: ");
+        // double velocity_y = queryDouble("Provide initial velovity in y: ");
+        // double gravity_x = 0.0;
+        // double gravity_y = queryDouble("Provide initial gravity in y: ");
+        // System.out.println();
+
+        System.out.println(
+                "--------------------------------------------------------------------------------------------> Y");
+
+        int time = 0;
+        for (; time <= 10000 && pos_y >= 0.0; ++time) {
+            System.out.print(String.format("Time %4ds: P(%5.2f|%5.2f) |", time, pos_x, pos_y));
+            for (int y = 0; y < (int) (pos_y * 10); ++y)
+                System.out.print(" ");
+
+            System.out.print("*");
+            // System.out.print(pos_y);
+            System.out.println();
+
             pos_x += velocity_x;
             pos_y += velocity_y;
             velocity_x += gravity_x;
             velocity_y += gravity_y;
-
-            System.out.println(String.format("Time %4ds: P(%5.2f|%5.2f)", time, pos_x, pos_y));
         }
+        System.out.println(String.format("Time %4ds: P(%5.2f|%5.2f) V X", time, pos_x, pos_y));
     }
 }
